@@ -19,5 +19,10 @@ for(i = 0; i < topFilms.length; i++){
 }
 
 function kiesFilm(){
+   filmplek=prompt("welke film moet op plek 1 staan");
 
+   console.log(topFilms[filmplek-1]);
+
+   eigenTopFilms.push("test");
+   
 }

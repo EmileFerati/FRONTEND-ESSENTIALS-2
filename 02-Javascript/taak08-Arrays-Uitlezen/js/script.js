@@ -1,18 +1,19 @@
 topFilms = [
-    "The Godfather",
-    "The Shawshank Redemption",
-    "Schindler's List",
-    "Raging Bull",
-    "Casablanca",
-    "Citizen Kane",
-    "Gone with the Wind",
-    "The Wizard of Oz",
-    "One Flew Over the Cuckoo's Nest",
-    "Lawrence of Arabia"
+    "The Godfather", //0
+    "The Shawshank Redemption",//1
+    "Schindler's List",//2
+    "Raging Bull",//3
+    "Casablanca",//4
+    "Citizen Kane",//5
+    "Gone with the Wind",//6
+    "The Wizard of Oz",//7
+    "One Flew Over the Cuckoo's Nest",//8
+    "Lawrence of Arabia"//9
 ];
 
+
 document.querySelector(".film1-ranking").innerHTML = 1;
-document.querySelector(".film1-naam").innerHTML = topFilms[0];
+document.querySelector(".film1-naam").innerHTML = topFilms[0]; 
 document.querySelector(".film2-ranking").innerHTML = 2;
 document.querySelector(".film2-naam").innerHTML = topFilms[1];
 document.querySelector(".film3-ranking").innerHTML = 3;
@@ -31,5 +32,19 @@ document.querySelector(".film9-ranking").innerHTML = 9;
 document.querySelector(".film9-naam").innerHTML = topFilms[8];
 document.querySelector(".film10-ranking").innerHTML = 10;
 document.querySelector(".film10-naam").innerHTML = topFilms[9];
+
+function kiesFavorieteFilm(){
+    strnaam=prompt("wat is jouw favoriete film?");
+
+    console.log(topFilms[strnaam-1]);
+
+    if(strnaam =>11){
+      alert("nee sorry dat lukt niet")
+    }
+
+document.querySelector(".film"+strnaam+"-naam").style.backgroundColor ="blue";
+document.querySelector(".film"+strnaam+"-naam").style.color="white";
+
+}
 
 
