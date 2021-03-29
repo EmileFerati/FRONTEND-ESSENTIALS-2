@@ -23,6 +23,6 @@ function kiesFilm(){
 
    console.log(topFilms[filmplek-1]);
 
-   eigenTopFilms.push("test");
+   eigenTopFilms.push("the godfather");
    
 }
