@@ -1,3 +1,8 @@
+var nummer = 1;
+var text = "kies film voor plek";
+
+
+
 topFilms = [
     "The Godfather",
     "The Shawshank Redemption",
@@ -11,18 +16,44 @@ topFilms = [
     "Lawrence of Arabia"
 ];
 
-eigenTopFilms = []
+eigenTopFilms = [];
 
-function kiesFilm(){
-    filmplek=prompt("welke film moet op plek 1 staan");
 //met deze for-loop word de ordered list gevuld met film namen
-for(i = 0; i < eigenTopFilms.length; i++){                
+for(i = 0; i < topFilms.length; i++){
     document.querySelector(".imdb-film" + (i+1)).innerHTML = topFilms[i];
-
-
-
-    document.querySelector
 }
+ 
+function checknummer(){
+document.getElementById("nummer").innerHTML = nummer;
+document.getElementById("text").innerHTML = text;
+}
+checknummer()
+ 
+function kiesFilm(){
+    film1 = prompt("Wat is je favorite film die je nog niet gekozen hebt?");
+    film1 --;
+    if(film1 < 11){
+        eigenTopFilms.push(topFilms[film1]);
+    nummer++;
+    }
+    film1 ++;
+    document.querySelector(".imdb-film"+film1).style.color = "white";
+    if(nummer >= 4){
+        nummer= "klaar";
+        text= " ";
+    }
+    console.log(eigenTopFilms);
+ 
+    for(x = 0; x < eigenTopFilms.length; x++){
+        document.querySelector(".eigen-film" + (x+1)).innerHTML = eigenTopFilms[x];
+    }
+    checknummer()
+}
+
+
+
+
+
 
 
 
