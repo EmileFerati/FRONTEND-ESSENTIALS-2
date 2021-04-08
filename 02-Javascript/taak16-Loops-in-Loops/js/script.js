@@ -8,9 +8,17 @@ function rondaf(getal, aantalplekkenachterkomma){
 }
 
 for (let i = 0; i < arrProductPrijs.length; i++) {
-    console.log()
-    for (let i = 0; i < arrProductKorting.length; i++) {
-        const element = array[i];
-        
+    var tussenprijs = arrProductPrijs[i]
+
+    for (let x = 0; x < arrProductKorting.length; x++) {
+        tussenprijs = tussenprijs * arrProductKorting[x]
     }
+
+    //console.log(tussenprijs)
+
+   var  rondaftussenprijs = rondaf(tussenprijs, 2)
+    console.log("product " +i+ " : " +rondaftussenprijs)
+    totaal = totaal+rondaftussenprijs
+
 }
+ console.log(totaal)
