@@ -10,9 +10,12 @@ function rondaf(getal, aantalplekkenachterkomma){
 for (let i = 0; i < arrProductPrijs.length; i++) {
     var tussenprijs = arrProductPrijs[i]
 
-    for (let x = 0; x < arrProductKorting.length; x++) {
+    for (let x = 0; x < arrProductKorting.length; x++) {  
         tussenprijs = tussenprijs * arrProductKorting[x]
     }
+
+
+    
 
     //console.log(tussenprijs)
 

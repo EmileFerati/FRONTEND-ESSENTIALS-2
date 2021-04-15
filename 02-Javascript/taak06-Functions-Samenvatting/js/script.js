@@ -26,7 +26,7 @@ function geefAntwoord(status){
         }
         else{
             score--;
-            document.querySelector("body").style.backgroundColor = "Red";
+            document.querySelector("body").style.backgroundColor = "red";
         }
     }
     else{
