@@ -25,10 +25,10 @@ function positiesNaarString(arr){
     var outputString = ""; //lege array van een string, waar uitkomst in wordt returnd
     //TODO: opdracht 1
     // hier worden er posities teruggezet naar letters
-    for (let k = 0; k < arr.length; k++){ //k word als waarde 0 gegeven die gaat door tot arr.length
+    for (let k = 0; k < arr.length; k++){ //i word als waarde 0 gegeven; loop gaat door tot arr.length, lengte van ingevulde input woord wanneer i kleiner is dan arr.lengt(input woord van gebruiker); i++= ophoging.
             let pos = arr[k]; 
             let letter =  strAlfabet[pos];
-            for ( let l = 0; l < letter.length; l++){
+            for ( let l = 0; l < letter.length; l++){ // L moet niet op 0 beginnen maar op ingevulde woord in dit geval plek 10, 
                 outputString = outputString + letter;
             }   
     }
@@ -44,8 +44,8 @@ function vermenigvuldigCodeword(strInput, strCodeword){
     
     var inputLength = strInput.length;
     var codewordLength = strCodeword.length;
-    var intDiv = Math.floor(inputLength / codewordLength); //het aantal keer dat het codeword in zijn geheel in het bericht past
-    var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
+    var intDiv = Math.floor(inputLength / codewordLength); // i waarde 0; loopt hoe vaak inputwoord in de codewoort past en geeft de codewoord zovaak weer terug.
+    var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld, van hoe vaak intdiv in een woord past en kijkt hoeveel letters overblijft.
     //TODO: opdracht 2
     for (let m = 0; m < intDiv; m++) {
             outputString = outputString + strCodeword; // m waarde 0 loopt hoevaak inputwoord in sw codewoort past en geeft de codewoord zovaak weer terug
@@ -59,6 +59,7 @@ function vermenigvuldigCodeword(strInput, strCodeword){
 //functie die een een bericht versleuteld.
 function versleutel(){
     strInput = document.querySelector("#input").value; 
+
     strCodeword = document.querySelector("#codeword").value;   
     console.log("input: " + strInput);
     console.log("codeword: " + strCodeword);
@@ -83,7 +84,7 @@ function ontsleutel(){
     //TODO: opdracht 3
     // hier worden alle variabelen gevult met de juistre waarde waarbij strCodeword het word iss
     
-    strInput = document.querySelector("#input").value; 
+    strInput = document.querySelector("#input").value; // kijkt wat variable codeword staat en dan is outputstring, de variable die in de html in de output staat
     strCodeword = document.querySelector("#codeword").value;   
     console.log("input: " + strInput);
     console.log("codeword: " + strCodeword);
