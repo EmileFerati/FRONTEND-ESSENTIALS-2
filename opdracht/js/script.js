@@ -15,7 +15,7 @@ function stringNaarPosities(str){ //string omzetten naar cijfers
                 outputArray.push(j);
                 // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
             }
-        }
+        } 
     }
     console.log("berekende posities: " + outputArray.toString())
     return outputArray;
@@ -32,7 +32,7 @@ function positiesNaarString(arr){
                 outputString = outputString + letter;
             }   
     }
-    return outputString;
+   return outputString;
 }
 
 
@@ -66,7 +66,7 @@ function versleutel(){
     arrCodewordPosities = stringNaarPosities(strCodewordFull);
     arrInputPosities = stringNaarPosities(strInput);
     positiesNaarString(arrInputPosities);
-    outputArray = [];
+    outputArray = []; 
     for (let i = 0; i < arrInputPosities.length; i++) {
         if(arrInputPosities[i] + arrCodewordPosities[i] > 26){
             outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-26);
@@ -81,7 +81,7 @@ function versleutel(){
 }
 function ontsleutel(){
     //TODO: opdracht 3
-    // hier worden alle variabelen gevult met de juistre waarde waarbij strCodeword het word is
+    // hier worden alle variabelen gevult met de juistre waarde waarbij strCodeword het word iss
     
     strInput = document.querySelector("#input").value; 
     strCodeword = document.querySelector("#codeword").value;   
